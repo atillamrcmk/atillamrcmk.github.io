@@ -1,58 +1,58 @@
-# 🌌 Atilla Mercimek – Kişisel CV & Portfolio Sitesi  
+# 🌌 Atilla Mercimek – Personal CV & Portfolio Website  
 
-Bu proje, **Atilla Mercimek**’in kişisel CV ve portföy web sitesidir.  
-Modern, koyu tonlu ve sade bir arayüzle; yazılım geliştirici kimliğimi, projelerimi ve teknik becerilerimi profesyonel biçimde sergilemek amacıyla hazırlanmıştır.  
+This project is the personal **CV and portfolio website of Atilla Mercimek**.  
+It was designed to showcase my identity as a software developer, my projects, and my technical skills through a modern, dark-themed, and minimal interface.  
 
-🔗 **Canlı Site:** [https://atillamrcmk.github.io/](https://atillamrcmk.github.io/)
-
----
-
-## 🧠 Amaç  
-Bu site, klasik PDF CV’lerin ötesine geçerek etkileşimli ve sürekli güncellenebilir bir kişisel profil sunar.  
-Kullanıcı deneyimi (UX), okunabilirlik ve erişilebilirlik ön planda tutulmuştur.  
-
-Ziyaretçiler:
-- Projelerimi ve teknik becerilerimi görüntüleyebilir,  
-- CV dosyamı doğrudan indirebilir,  
-- Benimle iletişime geçebilir.  
+🔗 **Live Website:** [https://atillamrcmk.github.io/](https://atillamrcmk.github.io/)
 
 ---
 
-## ⚙️ Kullanılan Teknolojiler  
+## 🧠 Purpose  
+This site goes beyond a traditional PDF CV by offering an interactive and continuously updatable personal profile.  
+User experience (UX), readability, and accessibility were the main priorities during development.  
 
-| Katman | Teknoloji |
-|:-------|:-----------|
+Visitors can:
+- Explore my projects and technical skills  
+- Directly download my CV  
+- Get in touch with me  
+
+---
+
+## ⚙️ Technologies Used  
+
+| Layer | Technology |
+|:------|:------------|
 | **Framework** | [Next.js 14](https://nextjs.org/) |
-| **Stil** | [Tailwind CSS](https://tailwindcss.com/) |
-| **Dil** | TypeScript |
-| **Yayınlama** | GitHub Pages |
-| **İkon & UI** | Lucide Icons, Framer Motion animasyonları |
-| **Tema** | Koyu tema (Dark Mode) + Mor/Vizyon geçişli degrade renk paleti |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **Language** | TypeScript |
+| **Deployment** | GitHub Pages |
+| **Icons & UI** | Lucide Icons, Framer Motion animations |
+| **Theme** | Dark Mode + Gradient palette (Purple → Violet tones) |
 
 ---
 
-## 🧩 Site Bölümleri  
+## 🧩 Website Sections  
 
-### 🏠 Ana Sayfa  
-- İsim, unvan, kısa biyografi  
-- Sosyal medya bağlantıları  
-- “CV’mi Gör” butonu  
+### 🏠 Home  
+- Name, title, and short biography  
+- Social media links  
+- “View CV” button  
 
-### 👤 Hakkımda  
-- Mobil geliştirme yaklaşımım, vizyonum ve değerlerim  
-- Kamu ve özel sektör arasında teknoloji köprüsü kurma hedefim  
-- Tasarım, performans, ölçeklenebilirlik odaklı prensiplerim  
+### 👤 About  
+- My approach to mobile development, values, and vision  
+- Goal of building a bridge between public sector and technology  
+- Focus on design, performance, and scalability principles  
 
 ### 🧰 Skills  
 - **Mobile Development:** Flutter, Dart, Firebase, Isar  
 - **Backend & Tools:** C#, .NET, Python, Node.js, SQL  
 - **Programming Languages:** C, C++, C#, Dart, Python, JavaScript  
-- **Other:** WinForms, OpenCV, ML, WebRTC, Git  
-
+- **Other:** WinForms, OpenCV, Machine Learning, WebRTC, Git  
 
 ### 📩 Contact  
-- İletişim formu ve doğrudan e-posta bağlantısı  
-- CV indirme butonu  
+- Contact form and direct email link  
+- CV download button  
 
 ---
 
+© 2025 Atilla Mercimek – All rights reserved.
