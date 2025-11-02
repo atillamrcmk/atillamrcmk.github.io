@@ -46,7 +46,7 @@ export default function LeftSidebar() {
 
   return (
     <aside
-      className="fixed left-2 md:left-6 top-1/2 -translate-y-1/2 z-40"
+      className="fixed left-1 sm:left-2 md:left-6 top-1/2 -translate-y-1/2 z-40"
       aria-label="Side navigation"
     >
       <nav className="flex flex-col gap-2 md:gap-4 items-center">

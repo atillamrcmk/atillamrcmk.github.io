@@ -86,7 +86,7 @@ export default function Contact() {
                 Contact
               </span>
             </h2>
-            <p className="text-[#9CA3AF] mb-6 md:mb-8 text-base sm:text-lg">
+            <p className="text-[#9CA3AF] mb-6 md:mb-8 text-base sm:text-lg px-2">
               Get in touch with me for new projects, ideas, or opportunities
             </p>
           </div>
