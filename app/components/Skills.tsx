@@ -160,7 +160,7 @@ export default function Skills() {
         
         {/* Content */}
         <div 
-          className="relative bg-[#1A1A22] border-2 rounded-xl px-4 py-3 font-semibold text-sm flex items-center gap-2.5 transition-all duration-300 min-w-0"
+          className="relative bg-[#1A1A22] border-2 rounded-lg md:rounded-xl px-3 py-2 md:px-4 md:py-3 font-semibold text-xs md:text-sm flex items-center gap-2 md:gap-2.5 transition-all duration-300 min-w-0"
           style={{
             borderColor: isHovered ? color : '#2f2a37',
             backgroundColor: isHovered ? `${color}15` : '#1A1A22',
@@ -170,7 +170,7 @@ export default function Skills() {
           <span className="flex-shrink-0">
             <SkillIcon skill={skill} />
           </span>
-          <span className="text-[#E5E7EB] truncate max-w-[200px]">{skill}</span>
+          <span className="text-[#E5E7EB] truncate max-w-[150px] sm:max-w-[200px]">{skill}</span>
           
           {/* Hover indicator */}
           {isHovered && (
@@ -197,15 +197,15 @@ export default function Skills() {
       <div className="relative z-10">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 id="skills-heading" className="m-0 mb-2 text-3xl md:text-4xl tracking-tight font-black">
-              <span className="gradient-text flex items-center gap-3">
-                <svg className="w-8 h-8 text-[#9333EA] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <h2 id="skills-heading" className="m-0 mb-2 text-2xl sm:text-3xl md:text-4xl tracking-tight font-black">
+              <span className="gradient-text flex items-center gap-2 sm:gap-3">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#9333EA] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16v4m-2-2h4m5-16v4m-2-2h4M9 9h6l-3 3-3-3zm0 0v6m0 0l3 3 3-3m-3 3v-6" />
                 </svg>
                 Skills
               </span>
             </h2>
-            <p className="text-[#9CA3AF] mb-8 text-lg">
+            <p className="text-[#9CA3AF] mb-6 md:mb-8 text-base sm:text-lg">
               Technologies and tools I use
             </p>
           </div>

@@ -37,39 +37,39 @@ export default function About() {
       <div className="relative z-10">
         <div className="container-x max-w-4xl mx-auto">
         {/* Section Header - Centered */}
-        <div className="text-center mb-12">
-          <h2 id="about-heading" className="m-0 mb-3 text-4xl md:text-5xl tracking-tight font-black">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 id="about-heading" className="m-0 mb-2 md:mb-3 text-3xl sm:text-4xl md:text-5xl tracking-tight font-black">
             <span className="gradient-text">About Me</span>
           </h2>
-          <p className="text-[#9CA3AF] text-lg max-w-xl mx-auto">
+          <p className="text-[#9CA3AF] text-base sm:text-lg max-w-xl mx-auto px-4">
             My thoughts on mobile app development, user experience, and technology
           </p>
         </div>
 
         {/* Main Content - Centered */}
-        <div className="space-y-8">
+        <div className="space-y-4 md:space-y-6 lg:space-y-8">
           {/* Primary Intro Card */}
           <div className="card">
-            <div className="flex items-start gap-5">
+            <div className="flex items-start gap-3 md:gap-5">
               <div className="flex-shrink-0">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#6D28D9] to-[#9333EA] flex items-center justify-center">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-[#6D28D9] to-[#9333EA] flex items-center justify-center">
+                  <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
               </div>
-              <div className="flex-grow">
-                <h3 className="text-2xl font-bold text-[#E5E7EB] mb-3">
+              <div className="flex-grow min-w-0">
+                <h3 className="text-xl md:text-2xl font-bold text-[#E5E7EB] mb-2 md:mb-3">
                   {profile.name}
                 </h3>
-                <p className="text-[#9333EA] font-semibold text-base mb-5">
+                <p className="text-[#9333EA] font-semibold text-sm md:text-base mb-3 md:mb-5">
                   {profile.title}
                 </p>
-                <div className="space-y-4">
-                  <p className="text-[#E5E7EB] leading-relaxed text-base">
+                <div className="space-y-3 md:space-y-4">
+                  <p className="text-[#E5E7EB] leading-relaxed text-sm md:text-base">
                     {profile.bio}
                   </p>
-                  <p className="text-[#E5E7EB] leading-relaxed text-base">
+                  <p className="text-[#E5E7EB] leading-relaxed text-sm md:text-base">
                     <span className="text-[#c4b5fd] font-semibold">Atilla</span> is a mobile app developer who places design, performance, and user experience at the center of his work. He builds modern, fast, and scalable applications using Flutter, Firebase, and Isar DB technologies.
                   </p>
                 </div>

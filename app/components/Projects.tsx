@@ -59,15 +59,15 @@ export default function Projects() {
       <div className="relative z-10">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 id="projects-heading" className="m-0 mb-2 text-3xl md:text-4xl tracking-tight font-black">
-              <span className="gradient-text flex items-center gap-3">
-                <svg className="w-8 h-8 text-[#6D28D9] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <h2 id="projects-heading" className="m-0 mb-2 text-2xl sm:text-3xl md:text-4xl tracking-tight font-black">
+              <span className="gradient-text flex items-center gap-2 sm:gap-3">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#6D28D9] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
                 My Projects
               </span>
             </h2>
-            <p className="text-[#9CA3AF] text-lg">
+            <p className="text-[#9CA3AF] text-base sm:text-lg">
               Projects I've developed and my open source contributions
             </p>
           </div>

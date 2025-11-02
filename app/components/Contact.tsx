@@ -78,15 +78,15 @@ export default function Contact() {
       <div className="relative z-10">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 id="contact-heading" className="m-0 mb-2 text-3xl md:text-4xl tracking-tight font-black">
-              <span className="gradient-text flex items-center gap-3">
-                <svg className="w-8 h-8 text-[#6D28D9] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <h2 id="contact-heading" className="m-0 mb-2 text-2xl sm:text-3xl md:text-4xl tracking-tight font-black">
+              <span className="gradient-text flex items-center gap-2 sm:gap-3">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#6D28D9] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 Contact
               </span>
             </h2>
-            <p className="text-[#9CA3AF] mb-8 text-lg">
+            <p className="text-[#9CA3AF] mb-6 md:mb-8 text-base sm:text-lg">
               Get in touch with me for new projects, ideas, or opportunities
             </p>
           </div>
@@ -161,7 +161,7 @@ export default function Contact() {
                     href={social.href}
                     target={social.href.startsWith("mailto:") ? undefined : "_blank"}
                     rel={social.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                    className="social-btn btn flex-1 min-w-[140px] group/btn relative overflow-hidden"
+                    className="social-btn btn flex-1 min-w-[120px] sm:min-w-[140px] text-xs sm:text-sm group/btn relative overflow-hidden"
                     aria-label={social.label}
                     style={{
                       background: `linear-gradient(135deg, ${social.color}15, ${social.color}05)`,
@@ -177,7 +177,7 @@ export default function Contact() {
                     }}
                   >
                     <svg
-                      className="w-6 h-6 mr-2 transition-all duration-300"
+                      className="w-5 h-5 sm:w-6 sm:h-6 mr-1.5 sm:mr-2 transition-all duration-300"
                       fill={social.icon === "email" ? "none" : "currentColor"}
                       stroke={social.icon === "email" ? "currentColor" : undefined}
                       viewBox="0 0 24 24"
@@ -212,12 +212,12 @@ export default function Contact() {
             </h3>
               
             {["name", "email", "message"].map((field) => (
-              <div key={field} className="mb-4">
+              <div key={field} className="mb-3 md:mb-4">
                 {field === "message" ? (
                   <textarea
                     id={field}
                     rows={5}
-                    className={`w-full p-4 rounded-lg border bg-[#13131a] text-[#E5E7EB] resize-none focus:outline-none focus:ring-2 focus:ring-[#6D28D9]/50 focus:border-[#6D28D9] transition-all ${
+                    className={`w-full p-3 sm:p-4 rounded-lg border bg-[#13131a] text-sm sm:text-base text-[#E5E7EB] resize-none focus:outline-none focus:ring-2 focus:ring-[#6D28D9]/50 focus:border-[#6D28D9] transition-all ${
                       focused === field ? "border-[#6D28D9]" : "border-[#2f2a37]"
                     }`}
                     placeholder="Your message..."
@@ -230,7 +230,7 @@ export default function Contact() {
                   <input
                     id={field}
                     type={field === "email" ? "email" : "text"}
-                    className={`w-full p-4 rounded-lg border bg-[#13131a] text-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#6D28D9]/50 focus:border-[#6D28D9] transition-all ${
+                    className={`w-full p-3 sm:p-4 rounded-lg border bg-[#13131a] text-sm sm:text-base text-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#6D28D9]/50 focus:border-[#6D28D9] transition-all ${
                       focused === field ? "border-[#6D28D9]" : "border-[#2f2a37]"
                     }`}
                     placeholder={field === "name" ? "Full Name" : "Email"}

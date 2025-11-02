@@ -105,15 +105,15 @@ export default function Experience() {
       <div className="relative z-10">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 id="experience-heading" className="m-0 mb-2 text-3xl md:text-4xl tracking-tight font-black">
-              <span className="gradient-text flex items-center gap-3">
-                <svg className="w-8 h-8 text-[#6D28D9] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <h2 id="experience-heading" className="m-0 mb-2 text-2xl sm:text-3xl md:text-4xl tracking-tight font-black">
+              <span className="gradient-text flex items-center gap-2 sm:gap-3">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#6D28D9] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Work Experience
+                <span className="whitespace-nowrap">Work Experience</span>
               </span>
             </h2>
-            <p className="text-[#9CA3AF] text-lg">
+            <p className="text-[#9CA3AF] text-base sm:text-lg">
               My career journey and professional experiences
             </p>
           </div>
@@ -141,16 +141,16 @@ export default function Experience() {
               
               {/* Timeline line connector with glow */}
               {index < experiences.length - 1 && (
-                <div className="absolute left-8 top-20 bottom-[-24px] w-0.5 bg-gradient-to-b from-[#6D28D9] via-[#9333EA] to-[#6D28D9] opacity-30 group-hover:opacity-60 transition-opacity">
+                <div className="absolute left-2 md:left-8 top-16 md:top-20 bottom-[-24px] w-0.5 bg-gradient-to-b from-[#6D28D9] via-[#9333EA] to-[#6D28D9] opacity-30 group-hover:opacity-60 transition-opacity">
                   <div className="absolute inset-0 bg-gradient-to-b from-[#6D28D9] to-[#9333EA] opacity-50 blur-sm"></div>
                 </div>
               )}
 
-            <div className="flex gap-6">
+            <div className="flex gap-3 md:gap-6">
               {/* Enhanced Timeline dot */}
               <div className="flex-shrink-0 relative z-10">
                 <div
-                  className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                  className={`w-4 h-4 md:w-5 md:h-5 rounded-full border-2 flex items-center justify-center ${
                     exp.endDate === null
                       ? "border-[#6D28D9] bg-[#6D28D9] shadow-lg shadow-[#6D28D9]/50"
                       : "border-[#2f2a37] bg-[#1A1A22] group-hover:border-[#6D28D9] transition-colors"
@@ -169,23 +169,23 @@ export default function Experience() {
               {/* Content */}
               <div className="flex-grow min-w-0">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
-                  <div className="flex-grow">
-                    <h3 className="m-0 mb-1 text-xl md:text-2xl font-bold group-hover:text-[#c4b5fd] transition-colors" itemProp="jobTitle">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2 md:mb-3">
+                  <div className="flex-grow min-w-0">
+                    <h3 className="m-0 mb-1 text-lg sm:text-xl md:text-2xl font-bold group-hover:text-[#c4b5fd] transition-colors" itemProp="jobTitle">
                       {exp.position}
                     </h3>
                     <div className="flex items-center gap-2 flex-wrap">
-                      <p className="m-0 text-[#9333EA] font-semibold text-lg" itemProp="worksFor">
+                      <p className="m-0 text-[#9333EA] font-semibold text-base sm:text-lg" itemProp="worksFor">
                         {exp.company}
                       </p>
-                      <span className="text-[#9CA3AF] text-sm">•</span>
-                      <span className="text-[#9CA3AF] text-sm">{exp.employmentType}</span>
+                      <span className="text-[#9CA3AF] text-xs sm:text-sm">•</span>
+                      <span className="text-[#9CA3AF] text-xs sm:text-sm">{exp.employmentType}</span>
                     </div>
                   </div>
                   
                   {/* Date and Duration */}
-                  <div className="flex-shrink-0 text-right">
-                    <div className="text-[#9CA3AF] text-sm font-medium mb-1">
+                  <div className="flex-shrink-0 text-left md:text-right">
+                    <div className="text-[#9CA3AF] text-xs sm:text-sm font-medium mb-1">
                       <time dateTime={exp.startDate} itemProp="startDate">
                         {formatDate(exp.startDate)}
                       </time>
@@ -198,7 +198,7 @@ export default function Experience() {
                         <span className="text-[#6D28D9] font-semibold">Current</span>
                       )}
                     </div>
-                    <div className="text-[#6D28D9] text-xs font-semibold">
+                    <div className="text-[#6D28D9] text-[10px] sm:text-xs font-semibold">
                       {calculateDuration(exp.startDate, exp.endDate)}
                     </div>
                   </div>

@@ -104,7 +104,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={heroRef}
-      className="hero-section mt-7 mb-32 md:mb-40 rounded-2xl border border-[#2f2a37] pt-24 pb-8 px-8 md:pt-40 md:pb-14 md:px-14 text-center bg-[#1A1A22] relative overflow-hidden"
+      className="hero-section mt-4 md:mt-7 mb-20 sm:mb-24 md:mb-32 lg:mb-40 rounded-xl md:rounded-2xl border border-[#2f2a37] pt-16 sm:pt-20 md:pt-24 lg:pt-40 pb-6 sm:pb-8 md:pb-14 px-4 sm:px-6 md:px-8 lg:px-14 text-center bg-[#1A1A22] relative overflow-hidden"
       aria-labelledby="hero-heading"
       style={{
         background: `
@@ -205,7 +205,7 @@ export default function Hero() {
 
       <div className="relative z-10">
         {/* 3D Profile Photo with enhanced effects */}
-        <div className="flex justify-center mb-12 md:mb-16 pt-32 md:pt-48">
+          <div className="flex justify-center mb-8 md:mb-12 lg:mb-16 pt-20 sm:pt-24 md:pt-32 lg:pt-48">
           <div className="relative group" style={{
             transform: `perspective(1000px) rotateY(${(mousePosition.x - 0.5) * 5}deg) rotateX(${-(mousePosition.y - 0.5) * 5}deg)`,
             transition: 'transform 0.3s ease-out'
@@ -214,7 +214,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#6D28D9] to-[#9333EA] rounded-full blur-2xl opacity-60 group-hover:opacity-80 transition-opacity animate-glow"></div>
             <div className="absolute -inset-3 bg-gradient-to-r from-[#9333EA] to-[#c4b5fd] rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
             
-            <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-[#2f2a37] shadow-[0_20px_60px_rgba(109,40,217,0.4)] group-hover:border-[#6D28D9] group-hover:shadow-[0_30px_80px_rgba(109,40,217,0.6)] transition-all duration-300">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-[#2f2a37] shadow-[0_20px_60px_rgba(109,40,217,0.4)] group-hover:border-[#6D28D9] group-hover:shadow-[0_30px_80px_rgba(109,40,217,0.6)] transition-all duration-300">
               <img
                 src="/profile-photo.jpg"
                 alt={profile.name}
@@ -247,9 +247,10 @@ export default function Hero() {
             </div>
             
             {/* Floating "Available" badge with animation */}
-            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#6D28D9] to-[#9333EA] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-xl animate-float flex items-center gap-1.5">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span>Available for Work</span>
+            <div className="absolute -top-4 md:-top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#6D28D9] to-[#9333EA] text-white text-[10px] sm:text-xs font-bold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full shadow-xl animate-float flex items-center gap-1 sm:gap-1.5">
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="hidden sm:inline">Available for Work</span>
+              <span className="sm:hidden">Available</span>
             </div>
           </div>
         </div>
@@ -258,7 +259,7 @@ export default function Hero() {
         <div className="mb-12 md:mb-16">
           <h1
             id="hero-heading"
-            className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-4 md:mb-6"
             style={{
               transform: `translateZ(0)`,
               textShadow: `0 0 30px rgba(109, 40, 217, 0.3)`
@@ -272,14 +273,14 @@ export default function Hero() {
             <svg className="w-7 h-7 md:w-8 md:h-8 text-[#6D28D9] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#E5E7EB] text-center tracking-wide">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#E5E7EB] text-center tracking-wide">
               {profile.title}
             </p>
           </div>
         </div>
 
         {/* Enhanced 3D Stats Cards */}
-        <div className="flex justify-center gap-8 md:gap-16 lg:gap-20 mb-16 md:mb-20 flex-wrap">
+        <div className="flex justify-center gap-4 sm:gap-6 md:gap-16 lg:gap-20 mb-12 md:mb-16 lg:mb-20 flex-wrap">
           {[
             { icon: "projects", value: counters.projects, label: "Projects", color: "#6D28D9", delay: 0 },
             { icon: "experience", value: counters.experience, label: "Years Experience", color: "#9333EA", delay: 0.1 },
@@ -302,7 +303,7 @@ export default function Hero() {
               
               {/* Icon container with 3D effect */}
               <div 
-                className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl border-2 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 group-hover:shadow-2xl"
+                className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl border-2 flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 group-hover:shadow-2xl"
                 style={{
                   background: `linear-gradient(135deg, ${stat.color}15, ${stat.color}05)`,
                   borderColor: `${stat.color}40`,
@@ -310,7 +311,7 @@ export default function Hero() {
                 }}
               >
                 {stat.icon === "projects" && (
-                  <svg className="w-8 h-8 md:w-10 md:h-10 group-hover:animate-bounce transition-transform" style={{ color: stat.color }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 group-hover:animate-bounce transition-transform" style={{ color: stat.color }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                 )}
@@ -328,23 +329,23 @@ export default function Hero() {
               
               <div className="relative">
                 <div 
-                  className="text-5xl md:text-6xl font-black mb-2 gradient-text drop-shadow-lg"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-1 md:mb-2 gradient-text drop-shadow-lg"
                   style={{ textShadow: `0 0 20px ${stat.color}40` }}
                 >
                   {stat.value}+
                 </div>
-                <div className="text-sm text-[#9CA3AF] font-medium uppercase tracking-wider">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-[#9CA3AF] font-medium uppercase tracking-wider">{stat.label}</div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Enhanced 3D CTA Buttons */}
-        <div className="flex justify-center gap-5 md:gap-6 flex-wrap mb-12">
+        <div className="flex justify-center gap-3 sm:gap-4 md:gap-6 flex-wrap mb-8 md:mb-12">
           <a
             href="/Atilla-Mercimek-CV.pdf"
             download
-            className="btn btn-primary group relative overflow-hidden min-w-[200px] h-[56px] text-base font-bold"
+            className="btn btn-primary group relative overflow-hidden min-w-[160px] sm:min-w-[200px] h-[48px] sm:h-[56px] text-sm sm:text-base font-bold"
             aria-label="CV PDF dosyasını indir"
             style={{
               transform: `perspective(1000px) rotateY(${(mousePosition.x - 0.5) * 2}deg)`,
@@ -361,7 +362,7 @@ export default function Hero() {
           </a>
           <a
             href="#projects"
-            className="btn group relative overflow-hidden min-w-[200px] h-[56px] text-base font-bold border-2 hover:border-[#6D28D9] backdrop-blur-sm"
+            className="btn group relative overflow-hidden min-w-[160px] sm:min-w-[200px] h-[48px] sm:h-[56px] text-sm sm:text-base font-bold border-2 hover:border-[#6D28D9] backdrop-blur-sm"
               aria-label="View Projects"
             style={{
               background: 'rgba(26, 26, 34, 0.8)',

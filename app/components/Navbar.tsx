@@ -83,12 +83,12 @@ export default function Navbar() {
             className="flex items-center gap-3 font-extrabold"
             aria-label="Ana sayfaya dön"
           >
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#6D28D9] to-[#9333EA] flex items-center justify-center shadow-lg shadow-[#6D28D9]/30">
-              <span className="text-white font-black text-lg">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-[#6D28D9] to-[#9333EA] flex items-center justify-center shadow-lg shadow-[#6D28D9]/30">
+              <span className="text-white font-black text-base md:text-lg">
                 {profile.name.split(' ').map(n => n[0]).join('')}
               </span>
             </div>
-            <span className="text-xl font-black text-white tracking-tight">
+            <span className="text-lg md:text-xl font-black text-white tracking-tight">
               {profile.name.split(' ')[0]}
             </span>
           </a>
@@ -124,7 +124,7 @@ export default function Navbar() {
             <a
               href="/Atilla-Mercimek-CV.pdf"
               download
-              className="px-6 py-3 rounded-xl font-bold text-base bg-gradient-to-r from-[#6D28D9] to-[#9333EA] text-white hover:shadow-lg hover:shadow-[#6D28D9]/50 transition-all"
+              className="px-4 md:px-6 py-2.5 md:py-3 rounded-xl font-bold text-sm md:text-base bg-gradient-to-r from-[#6D28D9] to-[#9333EA] text-white hover:shadow-lg hover:shadow-[#6D28D9]/50 transition-all"
               aria-label="CV indir"
             >
               <span className="flex items-center gap-2.5">
