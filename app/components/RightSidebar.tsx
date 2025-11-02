@@ -32,16 +32,16 @@ export default function RightSidebar() {
 
   return (
     <aside
-      className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
+      className="fixed right-2 md:right-6 top-1/2 -translate-y-1/2 z-40"
       aria-label="Stats and scroll indicator"
     >
-      <div className="flex flex-col gap-6 items-center">
+      <div className="flex flex-col gap-4 md:gap-6 items-center">
         {/* Stats Cards */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2 md:gap-3">
           {stats.map((stat, idx) => (
             <div
               key={stat.label}
-              className="w-20 h-20 rounded-2xl bg-[#1A1A22] border-2 border-[#2f2a37] flex flex-col items-center justify-center hover:border-[#6D28D9] hover:bg-[#6d28d915] hover:scale-110 transition-all group relative overflow-visible"
+              className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[#1A1A22] border-2 border-[#2f2a37] flex flex-col items-center justify-center hover:border-[#6D28D9] hover:bg-[#6d28d915] hover:scale-110 transition-all group relative overflow-visible"
             >
               {/* Tooltip */}
               <div className="absolute right-full mr-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50">
@@ -51,8 +51,8 @@ export default function RightSidebar() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-[#6D28D9]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative z-10 text-center">
-                <div className="text-2xl font-black gradient-text mb-1">{stat.value}</div>
-                <div className="text-[10px] text-[#9CA3AF] uppercase tracking-wider">
+                <div className="text-lg md:text-2xl font-black gradient-text mb-1">{stat.value}</div>
+                <div className="text-[8px] md:text-[10px] text-[#9CA3AF] uppercase tracking-wider">
                   {stat.label.slice(0, 4)}
                 </div>
               </div>
@@ -72,12 +72,35 @@ export default function RightSidebar() {
         <div className="w-0.5 h-16 bg-gradient-to-b from-transparent via-[#9333EA] to-[#6D28D9] opacity-50"></div>
 
         {/* Scroll Progress Circle */}
-        <div className="relative w-16 h-16 flex items-center justify-center">
-          <svg className="transform -rotate-90 w-16 h-16">
+        <div className="relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
+          <svg className="transform -rotate-90 w-12 h-12 md:w-16 md:h-16">
+            <circle
+              cx="24"
+              cy="24"
+              r="20"
+              className="md:hidden"
+              stroke="#2f2a37"
+              strokeWidth="2.5"
+              fill="none"
+            />
+            <circle
+              cx="24"
+              cy="24"
+              r="20"
+              className="md:hidden"
+              stroke="url(#gradient-mobile)"
+              strokeWidth="2.5"
+              fill="none"
+              strokeDasharray={`${2 * Math.PI * 20}`}
+              strokeDashoffset={`${2 * Math.PI * 20 * (1 - scrollProgress / 100)}`}
+              strokeLinecap="round"
+              style={{ transition: "stroke-dashoffset 0.15s ease-out" }}
+            />
             <circle
               cx="32"
               cy="32"
               r="28"
+              className="hidden md:block"
               stroke="#2f2a37"
               strokeWidth="3"
               fill="none"
@@ -86,22 +109,27 @@ export default function RightSidebar() {
               cx="32"
               cy="32"
               r="28"
+              className="hidden md:block"
               stroke="url(#gradient)"
               strokeWidth="3"
               fill="none"
               strokeDasharray={`${2 * Math.PI * 28}`}
               strokeDashoffset={`${2 * Math.PI * 28 * (1 - scrollProgress / 100)}`}
               strokeLinecap="round"
-              className="transition-all duration-150 ease-out"
+              style={{ transition: "stroke-dashoffset 0.15s ease-out" }}
             />
             <defs>
+              <linearGradient id="gradient-mobile" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#6D28D9" />
+                <stop offset="100%" stopColor="#9333EA" />
+              </linearGradient>
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#6D28D9" />
                 <stop offset="100%" stopColor="#9333EA" />
               </linearGradient>
             </defs>
           </svg>
-          <div className="absolute text-xs font-bold text-[#9CA3AF]">
+          <div className="absolute text-[10px] md:text-xs font-bold text-[#9CA3AF]">
             {Math.round(scrollProgress)}%
           </div>
         </div>
@@ -109,7 +137,7 @@ export default function RightSidebar() {
         {/* Back to Top Button */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="w-12 h-12 rounded-xl bg-[#1A1A22] border border-[#2f2a37] flex items-center justify-center hover:border-[#6D28D9] hover:bg-[#6d28d915] hover:scale-110 transition-all group relative overflow-visible"
+          className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[#1A1A22] border border-[#2f2a37] flex items-center justify-center hover:border-[#6D28D9] hover:bg-[#6d28d915] hover:scale-110 transition-all group relative overflow-visible"
           aria-label="Back to top"
         >
           {/* Tooltip */}
@@ -119,7 +147,7 @@ export default function RightSidebar() {
             </div>
           </div>
           <svg
-            className="w-5 h-5 text-[#9CA3AF] group-hover:text-[#6D28D9] transition-colors"
+            className="w-4 h-4 md:w-5 md:h-5 text-[#9CA3AF] group-hover:text-[#6D28D9] transition-colors"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
