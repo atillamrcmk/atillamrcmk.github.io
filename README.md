@@ -53,6 +53,6 @@ Visitors can:
 - Contact form and direct email link  
 - CV download button  
 
----
+--
 
 © 2025 Atilla Mercimek – All rights reserved.
