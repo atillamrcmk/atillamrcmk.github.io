@@ -38,14 +38,15 @@ export default function CursorFollower() {
     const handleElementHover = (e: MouseEvent) => {
       clearTimeout(hoverTimeout);
       const target = e.target as HTMLElement;
-      const isInteractive = 
+      const isInteractive = Boolean(
         target.tagName === "A" ||
         target.tagName === "BUTTON" ||
         target.closest("a") ||
         target.closest("button") ||
         target.closest(".project-card") ||
         target.closest(".skill-pill") ||
-        target.closest(".card");
+        target.closest(".card")
+      );
 
       hoverTimeout = setTimeout(() => {
         setIsHovering(isInteractive);

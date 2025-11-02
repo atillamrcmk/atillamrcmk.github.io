@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, ReactElement } from "react";
 import { profile } from "./data/profile";
 
 // Icon components for skills
 const SkillIcon = ({ skill }: { skill: string }) => {
-  const iconMap: { [key: string]: JSX.Element } = {
+  const iconMap: { [key: string]: ReactElement } = {
     Flutter: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
         <path d="M14.314 0L2.3 12 6 15.7 21.684 0zm.014 11.072L7.857 17.53l4.242 4.244L22.572 11.1z"/>
