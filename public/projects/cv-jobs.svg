@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#0D0F12"/>
+  <rect x="200" y="120" width="1200" height="760" rx="12" fill="#15181D" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="260" y="200" width="500" height="40" rx="8" fill="#1C2026"/>
+  <rect x="260" y="280" width="1080" height="140" rx="8" fill="#181B21"/>
+  <rect x="260" y="450" width="1080" height="140" rx="8" fill="#181B21"/>
+  <rect x="260" y="620" width="1080" height="140" rx="8" fill="#181B21"/>
+  <text x="280" y="225" fill="#A7ADB7" font-family="system-ui,sans-serif" font-size="22">CV Jobs</text>
+</svg>

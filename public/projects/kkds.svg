@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#15181D"/>
+  <rect x="80" y="80" width="1440" height="840" rx="12" stroke="rgba(255,255,255,0.08)" fill="#1C2026"/>
+  <rect x="120" y="120" width="420" height="760" rx="8" fill="#181B21" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="580" y="120" width="900" height="180" rx="8" fill="#181B21" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="580" y="340" width="430" height="260" rx="8" fill="#181B21" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="1050" y="340" width="430" height="260" rx="8" fill="#181B21" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="580" y="640" width="900" height="240" rx="8" fill="#181B21" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="160" y="180" width="180" height="10" rx="5" fill="#8B7CF6" opacity="0.7"/>
+  <rect x="160" y="220" width="280" height="8" rx="4" fill="rgba(245,247,250,0.2)"/>
+  <rect x="160" y="250" width="240" height="8" rx="4" fill="rgba(245,247,250,0.12)"/>
+  <rect x="160" y="320" width="280" height="8" rx="4" fill="rgba(245,247,250,0.16)"/>
+  <rect x="160" y="350" width="200" height="8" rx="4" fill="rgba(245,247,250,0.1)"/>
+  <text x="620" y="200" fill="#F5F7FA" font-family="system-ui,sans-serif" font-size="36" font-weight="700">Decision Support</text>
+  <text x="620" y="250" fill="#A7ADB7" font-family="system-ui,sans-serif" font-size="20">Records · Analysis · Early warning</text>
+</svg>

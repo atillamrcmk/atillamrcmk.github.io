@@ -1,0 +1,7 @@
+# Place CV PDF files here.
+
+# Expected filenames (configured in lib/constants/cv.ts):
+# - Atilla-Mercimek-CV.pdf       (TR / default)
+# - Atilla-Mercimek-CV-EN.pdf    (optional EN)
+
+# Until files are added, set CV_CONFIG.available flags accordingly.
