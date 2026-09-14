@@ -54,9 +54,11 @@ export async function generateMetadata({
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   if (!children) return null;
   return (
-    <section className="mb-10 md:mb-12">
-      <h2 className="text-xs uppercase tracking-[0.12em] text-[var(--accent)] mb-3">{title}</h2>
-      <div className="text-[var(--muted)] leading-relaxed">{children}</div>
+    <section className="py-8 md:py-10">
+      <h2 className="text-xs uppercase tracking-[0.14em] text-[var(--accent)] mb-3 md:mb-4">
+        {title}
+      </h2>
+      <div className="text-[var(--muted)] leading-[1.75] text-base">{children}</div>
     </section>
   );
 }
@@ -91,149 +93,43 @@ export default async function ProjectDetailPage({
   return (
     <>
       <LeftSidebar />
-      <Container>
+      <Container className="!px-5 sm:!px-7 lg:!px-10">
         <Navbar locale={locale} dict={dict} />
-        <main id="main-content" className="pb-16 md:pb-24">
+        <main id="main-content" className="pt-2 pb-16 md:pb-24">
           <Link
             href={`/${locale}/#projects`}
-            className="text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
+            className="inline-block text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
           >
             ← {dict.projects.back}
           </Link>
 
-          <header className="mt-8 mb-10 md:mb-14 max-w-3xl">
+          <header className="mt-8 md:mt-12 mb-8 md:mb-10 max-w-3xl">
             <p className="text-xs tracking-[0.14em] uppercase text-[var(--muted)] mb-3">
               {project.categories.join(" · ")}
               {project.independent ? ` · ${dict.projects.independentNote}` : ""}
             </p>
-            <h1 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-[1.15]">
               {title}
             </h1>
-            <p className="text-lg text-[var(--muted)]">{description}</p>
-          </header>
+            <p className="text-lg text-[var(--muted)] leading-relaxed mb-6">
+              {description}
+            </p>
 
-          <div className="mb-12 md:mb-16">
-            <ProjectMedia
-              src={project.image}
-              alt={title}
-              fallbackLabel={dict.projects.imageUnavailable}
-            />
-          </div>
-
-          <div className="grid lg:grid-cols-[1fr_18rem] gap-12">
-            <div>
-              <Section title={dict.projects.overview}>
-                <p>{description}</p>
-              </Section>
-              {problem && (
-                <Section title={dict.projects.problem}>
-                  <p>{problem}</p>
-                </Section>
-              )}
-              {solution && (
-                <Section title={dict.projects.solution}>
-                  <p>{solution}</p>
-                </Section>
-              )}
-              {features.length > 0 && (
-                <Section title={dict.projects.features}>
-                  <ul className="space-y-2">
-                    {features.map((f) => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
-                </Section>
-              )}
-              {architecture.length > 0 && (
-                <Section title={dict.projects.architecture}>
-                  <ul className="space-y-2">
-                    {architecture.map((f) => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
-                </Section>
-              )}
-              {decisions.length > 0 && (
-                <Section title={dict.projects.decisions}>
-                  <ul className="space-y-2">
-                    {decisions.map((f) => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
-                </Section>
-              )}
-              {limitations.length > 0 && (
-                <Section title={dict.projects.limitations}>
-                  <ul className="space-y-2">
-                    {limitations.map((f) => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
-                </Section>
-              )}
-              {future.length > 0 && (
-                <Section title={dict.projects.future}>
-                  <ul className="space-y-2">
-                    {future.map((f) => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
-                </Section>
-              )}
-            </div>
-
-            <aside className="space-y-6 lg:sticky lg:top-28 self-start">
-              <div className="border border-[var(--border)] rounded-[10px] p-5 bg-[var(--surface)]">
-                <p className="text-xs uppercase tracking-[0.12em] text-[var(--muted)] mb-3">
-                  {dict.projects.stack}
-                </p>
-                <p className="text-sm text-[var(--text)] leading-relaxed">
-                  {project.technologies.join(" · ")}
-                </p>
-              </div>
-
-              {meta && (
-                <div className="border border-[var(--border)] rounded-[10px] p-5 bg-[var(--surface)] space-y-3 text-sm">
-                  {meta.language && (
-                    <p className="text-[var(--muted)]">
-                      {dict.projects.metaLanguage}:{" "}
-                      <span className="text-[var(--text)]">{meta.language}</span>
-                    </p>
-                  )}
-                  {meta.stars > 0 && (
-                    <p className="text-[var(--muted)]">
-                      {dict.projects.metaStars}:{" "}
-                      <span className="text-[var(--text)]">{meta.stars}</span>
-                    </p>
-                  )}
-                  {meta.forks > 0 && (
-                    <p className="text-[var(--muted)]">
-                      {dict.projects.metaForks}:{" "}
-                      <span className="text-[var(--text)]">{meta.forks}</span>
-                    </p>
-                  )}
-                  {meta.updatedAt && (
-                    <p className="text-[var(--muted)]">
-                      {dict.projects.metaUpdated}:{" "}
-                      <span className="text-[var(--text)]">
-                        {formatIsoDate(meta.updatedAt, locale)}
-                      </span>
-                    </p>
-                  )}
-                </div>
-              )}
-
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+              <p className="text-sm text-[var(--muted)]">
+                <span className="text-[var(--text)]">{dict.projects.stack}:</span>{" "}
+                {project.technologies.join(" · ")}
+              </p>
               {github && (
                 <a
                   href={github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-secondary w-full"
+                  className="text-sm text-[var(--text)] hover:text-[var(--accent)] transition-colors"
                 >
-                  {dict.projects.github}
+                  {dict.projects.github} →
                 </a>
               )}
-
               <div className="lang-switch text-sm">
                 <Link href={`/tr/projects/${slug}/`} className={locale === "tr" ? "active" : ""}>
                   TR
@@ -243,7 +139,120 @@ export default async function ProjectDetailPage({
                   EN
                 </Link>
               </div>
-            </aside>
+            </div>
+          </header>
+
+          <div className="mb-12 md:mb-14">
+            <ProjectMedia
+              src={project.image}
+              alt={title}
+              fallbackLabel={dict.projects.imageUnavailable}
+              fit="contain"
+            />
+          </div>
+
+          <div className="max-w-2xl divide-y divide-[var(--border)]">
+            {problem && (
+              <Section title={dict.projects.problem}>
+                <p>{problem}</p>
+              </Section>
+            )}
+            {solution && (
+              <Section title={dict.projects.solution}>
+                <p>{solution}</p>
+              </Section>
+            )}
+            {features.length > 0 && (
+              <Section title={dict.projects.features}>
+                <ul className="space-y-3 list-disc pl-5 marker:text-[var(--accent)]">
+                  {features.map((f) => (
+                    <li key={f} className="pl-1.5">
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+            )}
+            {architecture.length > 0 && (
+              <Section title={dict.projects.architecture}>
+                <ul className="space-y-3 list-disc pl-5 marker:text-[var(--accent)]">
+                  {architecture.map((f) => (
+                    <li key={f} className="pl-1.5">
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+            )}
+            {decisions.length > 0 && (
+              <Section title={dict.projects.decisions}>
+                <ul className="space-y-3 list-disc pl-5 marker:text-[var(--accent)]">
+                  {decisions.map((f) => (
+                    <li key={f} className="pl-1.5">
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+            )}
+            {limitations.length > 0 && (
+              <Section title={dict.projects.limitations}>
+                <ul className="space-y-3 list-disc pl-5 marker:text-[var(--accent)]">
+                  {limitations.map((f) => (
+                    <li key={f} className="pl-1.5">
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+            )}
+            {future.length > 0 && (
+              <Section title={dict.projects.future}>
+                <ul className="space-y-3 list-disc pl-5 marker:text-[var(--accent)]">
+                  {future.map((f) => (
+                    <li key={f} className="pl-1.5">
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+            )}
+
+            {meta && (
+              <section className="py-8 md:py-10">
+                <h2 className="text-xs uppercase tracking-[0.14em] text-[var(--accent)] mb-4">
+                  GitHub
+                </h2>
+                <div className="space-y-3 text-sm text-[var(--muted)]">
+                  {meta.language && (
+                    <p>
+                      {dict.projects.metaLanguage}:{" "}
+                      <span className="text-[var(--text)]">{meta.language}</span>
+                    </p>
+                  )}
+                  {meta.stars > 0 && (
+                    <p>
+                      {dict.projects.metaStars}:{" "}
+                      <span className="text-[var(--text)]">{meta.stars}</span>
+                    </p>
+                  )}
+                  {meta.forks > 0 && (
+                    <p>
+                      {dict.projects.metaForks}:{" "}
+                      <span className="text-[var(--text)]">{meta.forks}</span>
+                    </p>
+                  )}
+                  {meta.updatedAt && (
+                    <p>
+                      {dict.projects.metaUpdated}:{" "}
+                      <span className="text-[var(--text)]">
+                        {formatIsoDate(meta.updatedAt, locale)}
+                      </span>
+                    </p>
+                  )}
+                </div>
+              </section>
+            )}
           </div>
         </main>
       </Container>

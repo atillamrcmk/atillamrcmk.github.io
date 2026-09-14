@@ -40,8 +40,13 @@ html.light {
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 html {
